@@ -1,6 +1,7 @@
 const int GREEN=9;
 const int YELL=8;
 const int RED=7;
+const int FGR=600;
 void setup() {
   // put your setup code here, to run once:
 pinMode (GREEN, OUTPUT);
@@ -10,20 +11,14 @@ pinMode (RED, OUTPUT);
 void loop() {
   digitalWrite(GREEN, HIGH);
   delay(6000);
-  digitalWrite(GREEN, LOW);
-  delay(600);
+  for (int i=0; i<3;i++) {
+    digitalWrite(GREEN, LOW);
+    delay(FGR);
   digitalWrite(GREEN, HIGH);
-  delay(600);
+  delay(FGR);
+  }
+  
   digitalWrite(GREEN, LOW);
-  delay(600);
-  digitalWrite(GREEN, HIGH);
-  delay(600);
-  digitalWrite(GREEN, LOW);
-  delay(600);
-  digitalWrite(GREEN, HIGH);
-  delay(600);
-  digitalWrite(GREEN, LOW);
-  //delay(900);
   digitalWrite(YELL, HIGH);
   delay(1500);
   digitalWrite(YELL, LOW);
